@@ -15,6 +15,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const server_1 = __importDefault(require("./server"));
 const db_1 = __importDefault(require("./db"));
+const test_1 = require("@lib/test");
+console.log(test_1.test);
 (function startServer() {
     return __awaiter(this, void 0, void 0, function* () {
         yield db_1.default();
