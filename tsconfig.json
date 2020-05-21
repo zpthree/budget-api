@@ -8,7 +8,9 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@lib/*": ["./src/lib/*"]
+      "@lib/*": ["./src/lib/*"],
+      "@models/*": ["./src/models/*"],
+      "@resolvers/*": ["./src/resolvers/*"]
     }
   },
   "lib": ["es2015"],

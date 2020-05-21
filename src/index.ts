@@ -1,7 +1,9 @@
 import express from "express";
-import server from "./server";
+import createServer from "./createServer";
 import connectDB from "./db";
 import { test } from "@lib/test";
+
+const server = createServer();
 
 (async function startServer() {
   await connectDB();
@@ -9,8 +11,12 @@ import { test } from "@lib/test";
   const app = express();
   server.applyMiddleware({ app });
 
-  app.listen({ port: 5050 }, () =>
-    console.log(`🚀 Server ready at http://localhost:5050${server.graphqlPath}`)
+  const PORT: number = 5050;
+
+  app.listen({ port: PORT }, () =>
+    console.log(
+      `🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`
+    )
   );
 
   app.get("/", (req, res, next) => {

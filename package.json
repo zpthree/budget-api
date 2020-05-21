@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -r tsconfig-paths/register src/index.ts --watch src/**/*",
+    "start": "nodemon",
     "tsc": "tsc"
   },
   "keywords": [],
