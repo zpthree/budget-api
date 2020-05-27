@@ -29,6 +29,7 @@ const ItemSchema = new mongoose.Schema({
     enum: ["Income", "Expense", "Saving"],
     required: true,
   },
+  // * TODO add these guys to the squad
   // category: {
   //   type: mongoose.Schema.Types.ObjectId,
   //   ref: 'Category',

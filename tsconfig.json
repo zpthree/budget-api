@@ -7,11 +7,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
-    "paths": {
-      "@lib/*": ["./src/lib/*"],
-      "@models/*": ["./src/models/*"],
-      "@resolvers/*": ["./src/resolvers/*"]
-    }
+    "allowSyntheticDefaultImports": true
   },
   "lib": ["es2015"],
   "include": ["src/**/*"],

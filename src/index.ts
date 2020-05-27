@@ -1,7 +1,7 @@
 import express from "express";
 import createServer from "./createServer";
 import connectDB from "./db";
-import { test } from "@lib/test";
+import { test } from "./lib/test";
 
 const server = createServer();
 
