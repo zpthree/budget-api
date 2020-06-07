@@ -1,7 +1,52 @@
+scalar Date
+
 type Query {
   hello: String
 }
 
 type Mutation {
-  hello: String
+  createItem(data: CreateItemInput!): Item!
+  updateItem(data: UpdateItemInput!): Item!
+}
+
+enum Frequency {
+  ONCE
+  WEEKLY
+  MONTHLY
+  YEARLY
+}
+
+enum Type {
+  INCOME
+  EXPENSES
+  SAVINGS
+}
+
+type Item {
+  id: ID!
+  title: String!
+  amount: Int!
+  recurring: Boolean
+  frequency: Frequency
+  nextDueDate: Date
+  type: Type!
+}
+
+input CreateItemInput {
+  title: String!
+  amount: Int!
+  recurring: Boolean
+  frequency: Frequency
+  nextDueDate: Date
+  type: Type!
+}
+
+input UpdateItemInput {
+  id: ID!
+  title: String
+  amount: Int
+  recurring: Boolean
+  frequency: Frequency
+  nextDueDate: Date
+  type: Type
 }

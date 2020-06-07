@@ -1,7 +1,6 @@
 import express from "express";
 import createServer from "./createServer";
 import connectDB from "./db";
-import { test } from "./lib/test";
 
 const server = createServer();
 
@@ -11,11 +10,11 @@ const server = createServer();
   const app = express();
   server.applyMiddleware({ app });
 
-  const PORT: number = 5050;
+  const port: number = 5050;
 
-  app.listen({ port: PORT }, () =>
+  app.listen({ port }, () =>
     console.log(
-      `🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`
+      `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`
     )
   );
 

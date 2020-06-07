@@ -11,22 +11,19 @@ const ItemSchema = new mongoose.Schema({
   },
   recurring: {
     type: Boolean,
-    required: true,
     default: false,
   },
   frequency: {
     type: String,
-    enum: ["Once", "Weekly", "Monthly", "Yearly"],
-    required: true,
-    default: "Once",
+    enum: ["ONCE", "WEEKLY", "MONTHLY", "YEARLY"],
+    default: "ONCE",
   },
   nextDueDate: {
     type: Date,
-    required: true,
   },
   type: {
     type: String,
-    enum: ["Income", "Expense", "Saving"],
+    enum: ["INCOME", "EXPENSE", "SAVINGS"],
     required: true,
   },
   // * TODO add these guys to the squad

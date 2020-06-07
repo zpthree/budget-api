@@ -1,1 +1,3 @@
-export * as ItemModel from "./ItemModel";
+import Item from "./ItemModel";
+
+export default { Item };
